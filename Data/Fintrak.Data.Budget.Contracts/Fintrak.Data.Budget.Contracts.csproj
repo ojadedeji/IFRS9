@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6A96E30-C9D9-4795-A1CA-58750DE1148A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fintrak.Data.Budget.Contracts</RootNamespace>
+    <AssemblyName>Fintrak.Data.Budget.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTOs\Capex\CapexCostInfo.cs" />
+    <Compile Include="DTOs\Capex\CapexEntryInfo.cs" />
+    <Compile Include="DTOs\Capex\DepreciationRateInfo.cs" />
+    <Compile Include="DTOs\Capex\CapexItemInfo.cs" />
+    <Compile Include="DTOs\Capex\CapexCategoryInfo.cs" />
+    <Compile Include="DTOs\Core\PrimaryLockInfo.cs" />
+    <Compile Include="DTOs\Core\SecondaryLockInfo.cs" />
+    <Compile Include="DTOs\Core\SecondaryLockLevelInfo.cs" />
+    <Compile Include="DTOs\Core\PolicyLevelInfo.cs" />
+    <Compile Include="DTOs\Core\PolicyInfo.cs" />
+    <Compile Include="DTOs\Core\ModificationLevelInfo.cs" />
+    <Compile Include="DTOs\Core\BudgetingLevelInfo.cs" />
+    <Compile Include="DTOs\Fee\FeeVolumeBasedRateInfo.cs" />
+    <Compile Include="DTOs\Fee\FeeSharedRatioInfo.cs" />
+    <Compile Include="DTOs\Fee\FeeGroupEntryInfo.cs" />
+    <Compile Include="DTOs\Fee\FeeEntryInfo.cs" />
+    <Compile Include="DTOs\Fee\FeeSharedExemptionInfo.cs" />
+    <Compile Include="DTOs\Fee\FeeItemInfo.cs" />
+    <Compile Include="DTOs\Fee\FeeGroupInfo.cs" />
+    <Compile Include="DTOs\Fee\FeeVolumeBasedSetupInfo.cs" />
+    <Compile Include="DTOs\Opex\OpexVolumeBasedRateInfo.cs" />
+    <Compile Include="DTOs\Opex\OpexEntryInfo.cs" />
+    <Compile Include="DTOs\Opex\OpexVolumeBasedSetupInfo.cs" />
+    <Compile Include="DTOs\Opex\OpexItemInfo.cs" />
+    <Compile Include="DTOs\Opex\OpexCategoryInfo.cs" />
+    <Compile Include="DTOs\Revenue\RevenuePoolInfo.cs" />
+    <Compile Include="DTOs\Revenue\RevenueIncExpInfo.cs" />
+    <Compile Include="DTOs\Revenue\ProductVolumeBasedSetupInfo.cs" />
+    <Compile Include="DTOs\Revenue\ProductVolumeBasedRateInfo.cs" />
+    <Compile Include="DTOs\Revenue\ProductSharedRatioInfo.cs" />
+    <Compile Include="DTOs\Revenue\ProductPoolRateInfo.cs" />
+    <Compile Include="DTOs\Revenue\ProductInterestRateInfo.cs" />
+    <Compile Include="DTOs\Revenue\ProductGroupEntryInfo.cs" />
+    <Compile Include="DTOs\Revenue\ProductInfo.cs" />
+    <Compile Include="DTOs\Revenue\ProductGroupInfo.cs" />
+    <Compile Include="DTOs\StaffCost\StaffCostInfo.cs" />
+    <Compile Include="DTOs\StaffCost\StaffCountInfo.cs" />
+    <Compile Include="DTOs\StaffCost\TeamPayClassificationInfo.cs" />
+    <Compile Include="DTOs\StaffCost\PayStructureInfo.cs" />
+    <Compile Include="DTOs\Team\OfficerDetailInfo.cs" />
+    <Compile Include="DTOs\Team\TeamInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository Interfaces\Capex\ICapexCostRepository.cs" />
+    <Compile Include="Repository Interfaces\Capex\IDepreciationRateRepository.cs" />
+    <Compile Include="Repository Interfaces\Capex\ICapexEntryRepository.cs" />
+    <Compile Include="Repository Interfaces\Capex\ICapexItemRepository.cs" />
+    <Compile Include="Repository Interfaces\Capex\ICapexCategoryRepository.cs" />
+    <Compile Include="Repository Interfaces\Core\IModificationLevelRepository.cs" />
+    <Compile Include="Repository Interfaces\Core\IPrimaryLockRepository.cs" />
+    <Compile Include="Repository Interfaces\Core\ISecondaryLockRepository.cs" />
+    <Compile Include="Repository Interfaces\Core\ISecondaryLockLevelRepository.cs" />
+    <Compile Include="Repository Interfaces\Core\IPolicyRepository.cs" />
+    <Compile Include="Repository Interfaces\Core\IPolicyLevelRepository.cs" />
+    <Compile Include="Repository Interfaces\Core\ICurrencyRateRepository.cs" />
+    <Compile Include="Repository Interfaces\Core\IBudgetingLevelRepository.cs" />
+    <Compile Include="Repository Interfaces\Core\IGeneralSettingRepository.cs" />
+    <Compile Include="Repository Interfaces\Core\IModuleRepository.cs" />
+    <Compile Include="Repository Interfaces\Core\ICurrencyRepository.cs" />
+    <Compile Include="Repository Interfaces\Core\IOperationReviewRepository.cs" />
+    <Compile Include="Repository Interfaces\Core\IOperationRepository.cs" />
+    <Compile Include="Repository Interfaces\Fee\IFeeSharedRatioRepository.cs" />
+    <Compile Include="Repository Interfaces\Fee\IFeeVolumeBasedSetupRepository.cs" />
+    <Compile Include="Repository Interfaces\Fee\IFeeSharedExemptionRepository.cs" />
+    <Compile Include="Repository Interfaces\Fee\IFeeItemRepository.cs" />
+    <Compile Include="Repository Interfaces\Fee\IFeeGroupRepository.cs" />
+    <Compile Include="Repository Interfaces\Fee\IFeeEntryRepository.cs" />
+    <Compile Include="Repository Interfaces\Fee\IFeeGroupEntryRepository.cs" />
+    <Compile Include="Repository Interfaces\Fee\IFeeMovementRepository.cs" />
+    <Compile Include="Repository Interfaces\Fee\IFeeCalculationTypeRepository.cs" />
+    <Compile Include="Repository Interfaces\Fee\IFeeCaptionRepository.cs" />
+    <Compile Include="Repository Interfaces\Fee\IFeeCategoryRepository.cs" />
+    <Compile Include="Repository Interfaces\Fee\IFeeVolumeBasedRateRepository.cs" />
+    <Compile Include="Repository Interfaces\Opex\IOpexVolumeBasedRateRepository.cs" />
+    <Compile Include="Repository Interfaces\Opex\IOpexEntryRepository.cs" />
+    <Compile Include="Repository Interfaces\Opex\IOpexVolumeBasedSetupRepository.cs" />
+    <Compile Include="Repository Interfaces\Opex\IOpexItemRepository.cs" />
+    <Compile Include="Repository Interfaces\Opex\IOpexCategoryRepository.cs" />
+    <Compile Include="Repository Interfaces\Revenue\IProductClassificationRepository.cs" />
+    <Compile Include="Repository Interfaces\Revenue\IProductCategoryRepository.cs" />
+    <Compile Include="Repository Interfaces\Revenue\IRevenueSettingRepository.cs" />
+    <Compile Include="Repository Interfaces\Revenue\IRevenueCaptionRepository.cs" />
+    <Compile Include="Repository Interfaces\Revenue\IProductVolumeBasedSetupRepository.cs" />
+    <Compile Include="Repository Interfaces\Revenue\IProductVolumeBasedRateRepository.cs" />
+    <Compile Include="Repository Interfaces\Revenue\IProductSharedRatioRepository.cs" />
+    <Compile Include="Repository Interfaces\Revenue\IProductPoolRateRepository.cs" />
+    <Compile Include="Repository Interfaces\Revenue\IProductInterestRateRepository.cs" />
+    <Compile Include="Repository Interfaces\Revenue\IProductGroupEntryRepository.cs" />
+    <Compile Include="Repository Interfaces\Revenue\IProductGroupRepository.cs" />
+    <Compile Include="Repository Interfaces\Revenue\IProductRepository.cs" />
+    <Compile Include="Repository Interfaces\StaffCost\IStaffCostRepository.cs" />
+    <Compile Include="Repository Interfaces\StaffCost\IStaffCountRepository.cs" />
+    <Compile Include="Repository Interfaces\StaffCost\IPayStructureRepository.cs" />
+    <Compile Include="Repository Interfaces\StaffCost\ITeamPayClassificationRepository.cs" />
+    <Compile Include="Repository Interfaces\StaffCost\IPayClassificationRepository.cs" />
+    <Compile Include="Repository Interfaces\StaffCost\IGradeRepository.cs" />
+    <Compile Include="Repository Interfaces\Team\ITeamClassificationRepository.cs" />
+    <Compile Include="Repository Interfaces\Team\ITeamUserRepository.cs" />
+    <Compile Include="Repository Interfaces\Team\ITeamSettingRepository.cs" />
+    <Compile Include="Repository Interfaces\Team\ITeamClassificationTypeRepository.cs" />
+    <Compile Include="Repository Interfaces\Team\IOfficerDetailRepository.cs" />
+    <Compile Include="Repository Interfaces\Team\ITeamDefinitionRepository.cs" />
+    <Compile Include="Repository Interfaces\Team\ITeamRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Fintrak.Shared.Common\Fintrak.Shared.Common.csproj">
+      <Project>{d188c9ca-c170-4496-8cad-c6eee1f3d7d8}</Project>
+      <Name>Fintrak.Shared.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

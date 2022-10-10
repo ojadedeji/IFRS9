@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8249BD02-FC67-4D0D-B989-B87A881ADF54}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fintrak.Data.MPR</RootNamespace>
+    <AssemblyName>Fintrak.Data.MPR</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data Repositories\MPR_BS\BalanceSheetBudgetOfficerRepository.cs" />
+    <Compile Include="Data Repositories\MPR_BS\BalanceSheetBudgetRepository.cs" />
+    <Compile Include="Data Repositories\MPR_BS\BalanceSheetThresholdRepository.cs" />
+    <Compile Include="Data Repositories\MPR_BS\BSINOtherInformationTotalLineRepository.cs" />
+    <Compile Include="Data Repositories\MPR_BS\BSINOtherInformationRepository.cs" />
+    <Compile Include="Data Repositories\MPR_BS\BSCaptionRepository.cs" />
+    <Compile Include="Data Repositories\MPR_BS\BSGLMappingRepository.cs" />
+    <Compile Include="Data Repositories\MPR_BS\MPRBalanceSheetAdjustmentRepository.cs" />
+    <Compile Include="Data Repositories\MPR_BS\MPRBalanceSheetRepository.cs" />
+    <Compile Include="Data Repositories\MPR_BS\MPRProductRepository.cs" />
+    <Compile Include="Data Repositories\MPR_BS\NonProductMapRepository.cs" />
+    <Compile Include="Data Repositories\MPR_BS\NonProductRateRepository.cs" />
+    <Compile Include="Data Repositories\MPR_BS\ProductMISRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\ServiceseRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\OpexBranchMappingRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\SbuTypeRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\SbuRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\AbcRatioRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\RatiosRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\RatioCaptionMappingRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\MessagingSubscriptionRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\AccountMISRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\AccountOfficerDetailRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\AccountTransferPriceRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\BranchDefaultMISRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\BSExemptionRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\CaptionMappingRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\CustAccountRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\GeneralTransferPriceRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\ManagementTreeRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\MemoAccountMapRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\MemoGLMapRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\MemoProductMapRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\MemoUnitsRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\MISReplacementRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\MPRSetupRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\SetupRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\StaffsRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\TeamClassificationMapRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\TeamClassificationRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\TeamClassificationTypeRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\TeamDefinitionRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\TeamRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\TransferPriceRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\UserClassificationMapRepository.cs" />
+    <Compile Include="Data Repositories\MPR_Core\UserMISRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\CategoryTransferPriceRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\FixedAssetSharingRatioRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\HoExemptionMISCodeRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\ActivityBaseRatioRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\ActivityBaseRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\CostCentreDefinitionRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\CostCentreRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\ExpenseBasisRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\ExpenseGLMappingRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\ExpenseMappingRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\ExpenseProductMappingRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\ExpenseRawBasisRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\IncomeCashCentreCodeRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\IncomeCentralVaultAccountsRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\IncomeNEAGLSBURepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\LowCostRemapRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\NEABranchSBUSharesRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\NEABranchSharingRatioRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\NEASharingRatioFcyRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\NEASharingRatioRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\OpexAbcExemptionRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\OpexBasisMappingRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\OpexBusinessRuleRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\OpexGLBasisRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\OpexGLMappingRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\OpexManagementTreeRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\OpexMISReplacementRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\OpexRawExpenseRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\OpexReportRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\StaffCostRepository.cs" />
+    <Compile Include="Data Repositories\MPR_PL\GLExceptionRepository.cs" />
+    <Compile Include="Data Repositories\MPR_PL\GLMISRepository.cs" />
+    <Compile Include="Data Repositories\MPR_PL\GLReclassificationRepository.cs" />
+    <Compile Include="Data Repositories\MPR_PL\MPRGLMappingRepository.cs" />
+    <Compile Include="Data Repositories\MPR_PL\MPRPLDerivedCaptionRepository.cs" />
+    <Compile Include="Data Repositories\MPR_PL\MPRCommFeeRepository.cs" />
+    <Compile Include="Data Repositories\MPR_PL\MPRTotalLineMakeUpRepository.cs" />
+    <Compile Include="Data Repositories\MPR_PL\MPRTotalLineRepository.cs" />
+    <Compile Include="Data Repositories\MPR_PL\IncomeCentralVaultScheduleRepository.cs" />
+    <Compile Include="Data Repositories\MPR_PL\PLCaptionRepository.cs" />
+    <Compile Include="Data Repositories\MPR_PL\PLIncomeReportAdjustmentRepository.cs" />
+    <Compile Include="Data Repositories\MPR_PL\PLIncomeReportRepository.cs" />
+    <Compile Include="Data Repositories\MPR_PL\RevenueBudgetOfficerRepository.cs" />
+    <Compile Include="Data Repositories\MPR_OPEX\CheckListRepository.cs" />
+    <Compile Include="Data Repositories\MPR_PL\ProcessDataRepository.cs" />
+    <Compile Include="Data Repositories\MPR_PL\RevenueBudgetRepository.cs" />
+    <Compile Include="Data Repositories\MPR_PL\RevenueRepository.cs" />
+    <Compile Include="MPRContext.cs" />
+    <Compile Include="DataRepositoryBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Fintrak.Shared.AuditService\Fintrak.Shared.AuditService.csproj">
+      <Project>{6861C3AA-5FF0-42E9-9582-90DC33815491}</Project>
+      <Name>Fintrak.Shared.AuditService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fintrak.Data.MPR.Contracts\Fintrak.Data.MPR.Contracts.csproj">
+      <Project>{4DD9C98C-DCEA-49F1-9BE3-EAE298FF1B42}</Project>
+      <Name>Fintrak.Data.MPR.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fintrak.Data.SystemCore.Contracts\Fintrak.Data.SystemCore.Contracts.csproj">
+      <Project>{a7ce0b7d-8c8b-466d-bf0a-01f9c1b0224a}</Project>
+      <Name>Fintrak.Data.SystemCore.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fintrak.Data.SystemCore\Fintrak.Data.SystemCore.csproj">
+      <Project>{ead0f228-1633-4323-99bc-8303b85130f6}</Project>
+      <Name>Fintrak.Data.SystemCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Fintrak.Shared.Common\Fintrak.Shared.Common.csproj">
+      <Project>{D188C9CA-C170-4496-8CAD-C6EEE1F3D7D8}</Project>
+      <Name>Fintrak.Shared.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Fintrak.Shared.Core.Entities\Fintrak.Shared.Core.Entities.csproj">
+      <Project>{86D9D66B-C03B-4643-A9FB-99F96D0A52BC}</Project>
+      <Name>Fintrak.Shared.Core.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Fintrak.Shared.Core.Framework\Fintrak.Shared.Core.Framework.csproj">
+      <Project>{36c91371-851e-4720-9eb4-53481a50d8c2}</Project>
+      <Name>Fintrak.Shared.Core.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Fintrak.Shared.SystemCore.Entities\Fintrak.Shared.SystemCore.Entities.csproj">
+      <Project>{0ee29e47-a877-49c6-9154-d0c44545edb0}</Project>
+      <Name>Fintrak.Shared.SystemCore.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Fintrak.Shared.SystemCore.Framework\Fintrak.Shared.SystemCore.Framework.csproj">
+      <Project>{c7a1140d-610b-40d9-8874-3571ed35e793}</Project>
+      <Name>Fintrak.Shared.SystemCore.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
