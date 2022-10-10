@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{910570D7-EDFE-40C6-B40F-D5AD190D0FCD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fintrak.Business.MPR.Managers</RootNamespace>
+    <AssemblyName>Fintrak.Business.MPR.Managers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Managers\MPRBSManager.cs" />
+    <Compile Include="Managers\MPRCoreManager.cs" />
+    <Compile Include="Managers\MPROPEXManager.cs" />
+    <Compile Include="Managers\MPRPLManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Data\Fintrak.Data.Core.Contracts\Fintrak.Data.Core.Contracts.csproj">
+      <Project>{9a854db3-b1ac-4ad8-84f5-b115a19a3188}</Project>
+      <Name>Fintrak.Data.Core.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Data\Fintrak.Data.Core\Fintrak.Data.Core.csproj">
+      <Project>{ed41a206-b581-4c2a-b263-9eb040dc1c9d}</Project>
+      <Name>Fintrak.Data.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Fintrak.Data.SystemCore.Contracts\Fintrak.Data.SystemCore.Contracts.csproj">
+      <Project>{a7ce0b7d-8c8b-466d-bf0a-01f9c1b0224a}</Project>
+      <Name>Fintrak.Data.SystemCore.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Fintrak.Data.SystemCore\Fintrak.Data.SystemCore.csproj">
+      <Project>{ead0f228-1633-4323-99bc-8303b85130f6}</Project>
+      <Name>Fintrak.Data.SystemCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Presentation\Fintrak.Presentation.WebClient\Fintrak.Presentation.WebClient.csproj">
+      <Project>{9D8A396D-9058-4DFF-88BE-00AD5B23339D}</Project>
+      <Name>Fintrak.Presentation.WebClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Shared\Fintrak.Shared.Common\Fintrak.Shared.Common.csproj">
+      <Project>{d188c9ca-c170-4496-8cad-c6eee1f3d7d8}</Project>
+      <Name>Fintrak.Shared.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Shared\Fintrak.Shared.Core.Entities\Fintrak.Shared.Core.Entities.csproj">
+      <Project>{86d9d66b-c03b-4643-a9fb-99f96d0a52bc}</Project>
+      <Name>Fintrak.Shared.Core.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Shared\Fintrak.Shared.Core.Framework\Fintrak.Shared.Core.Framework.csproj">
+      <Project>{36c91371-851e-4720-9eb4-53481a50d8c2}</Project>
+      <Name>Fintrak.Shared.Core.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Shared\Fintrak.Shared.SystemCore.Entities\Fintrak.Shared.SystemCore.Entities.csproj">
+      <Project>{0ee29e47-a877-49c6-9154-d0c44545edb0}</Project>
+      <Name>Fintrak.Shared.SystemCore.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Shared\Fintrak.Shared.SystemCore.Framework\Fintrak.Shared.SystemCore.Framework.csproj">
+      <Project>{c7a1140d-610b-40d9-8874-3571ed35e793}</Project>
+      <Name>Fintrak.Shared.SystemCore.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Fintrak.Business.MPR.Contracts\Fintrak.Business.MPR.Contracts\Fintrak.Business.MPR.Contracts.csproj">
+      <Project>{67a190cf-63f7-4a18-8eb4-4d902b3ec3f7}</Project>
+      <Name>Fintrak.Business.MPR.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

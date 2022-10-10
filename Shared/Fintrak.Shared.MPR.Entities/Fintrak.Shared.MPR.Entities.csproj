@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{412C25F1-EA5F-402C-B1F8-443767D21E85}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fintrak.Shared.MPR.Entities</RootNamespace>
+    <AssemblyName>Fintrak.Shared.MPR.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MPR_BS\BSINOtherInformationTotalLine.cs" />
+    <Compile Include="MPR_BS\BSINOtherInformation.cs" />
+    <Compile Include="MPR_BS\BalanceSheetBudget.cs" />
+    <Compile Include="MPR_BS\BalanceSheetBudgetOfficer.cs" />
+    <Compile Include="MPR_BS\BalanceSheetThreshold.cs" />
+    <Compile Include="MPR_BS\BSCaption.cs" />
+    <Compile Include="MPR_BS\BSGLMapping.cs" />
+    <Compile Include="MPR_BS\MPRBalanceSheet.cs" />
+    <Compile Include="MPR_BS\MPRBalanceSheetAdjustment.cs" />
+    <Compile Include="MPR_PL\MPRCommFee.cs" />
+    <Compile Include="MPR_BS\MPRProduct.cs" />
+    <Compile Include="MPR_BS\NonProductMap.cs" />
+    <Compile Include="MPR_BS\NonProductRate.cs" />
+    <Compile Include="MPR_BS\ProductMIS.cs" />
+    <Compile Include="MPR_Core\Servicese.cs" />
+    <Compile Include="MPR_OPEX\OpexBranchMapping.cs" />
+    <Compile Include="MPR_Core\SbuType.cs" />
+    <Compile Include="MPR_Core\Sbu.cs" />
+    <Compile Include="MPR_Core\AbcRatio.cs" />
+    <Compile Include="MPR_Core\Ratios.cs" />
+    <Compile Include="MPR_Core\RatioCaptionMapping.cs" />
+    <Compile Include="MPR_Core\MessagingSubscription.cs" />
+    <Compile Include="MPR_Core\AccountMIS.cs" />
+    <Compile Include="MPR_Core\AccountOfficerDetail.cs" />
+    <Compile Include="MPR_Core\AccountTransferPrice.cs" />
+    <Compile Include="MPR_Core\BranchDefaultMIS.cs" />
+    <Compile Include="MPR_Core\BSExemption.cs" />
+    <Compile Include="MPR_Core\CaptionMapping.cs" />
+    <Compile Include="MPR_Core\CustAccount.cs" />
+    <Compile Include="MPR_Core\GeneralTransferPrice.cs" />
+    <Compile Include="MPR_Core\ManagementTree.cs" />
+    <Compile Include="MPR_Core\MemoAccountMap.cs" />
+    <Compile Include="MPR_Core\MemoGLMap.cs" />
+    <Compile Include="MPR_Core\MemoProductMap.cs" />
+    <Compile Include="MPR_Core\MemoUnit.cs" />
+    <Compile Include="MPR_Core\MISReplacement.cs" />
+    <Compile Include="MPR_Core\MPRSetup.cs" />
+    <Compile Include="MPR_Core\Setup.cs" />
+    <Compile Include="MPR_Core\Staffs.cs" />
+    <Compile Include="MPR_Core\Team.cs" />
+    <Compile Include="MPR_Core\TeamClassification.cs" />
+    <Compile Include="MPR_Core\TeamClassificationMap.cs" />
+    <Compile Include="MPR_Core\TeamClassificationType.cs" />
+    <Compile Include="MPR_Core\TeamDefinition.cs" />
+    <Compile Include="MPR_Core\TransferPrice.cs" />
+    <Compile Include="MPR_Core\UserClassificationMap .cs" />
+    <Compile Include="MPR_Core\UserMis.cs" />
+    <Compile Include="MPR_OPEX\CategoryTransferPrice.cs" />
+    <Compile Include="MPR_OPEX\CostCentrePoint.cs" />
+    <Compile Include="MPR_OPEX\FixedAssetSharingRatio.cs" />
+    <Compile Include="MPR_OPEX\HoExemptionMISCode.cs" />
+    <Compile Include="MPR_OPEX\ActivityBase.cs" />
+    <Compile Include="MPR_OPEX\ActivityBaseRatio.cs" />
+    <Compile Include="MPR_OPEX\CostCentre.cs" />
+    <Compile Include="MPR_OPEX\CostCentreDefinition.cs" />
+    <Compile Include="MPR_OPEX\ExpenseBasis.cs" />
+    <Compile Include="MPR_OPEX\ExpenseGLMapping.cs" />
+    <Compile Include="MPR_OPEX\ExpenseMapping.cs" />
+    <Compile Include="MPR_OPEX\ExpenseProductMapping.cs" />
+    <Compile Include="MPR_OPEX\ExpenseRawBasis.cs" />
+    <Compile Include="MPR_OPEX\IncomeCashCentreCode.cs" />
+    <Compile Include="MPR_OPEX\IncomeCentralVaultAccounts.cs" />
+    <Compile Include="MPR_OPEX\IncomeNEAGLSBU.cs" />
+    <Compile Include="MPR_OPEX\LowCostRemap.cs" />
+    <Compile Include="MPR_OPEX\NEABranchSBUShares.cs" />
+    <Compile Include="MPR_OPEX\NEABranchSharingRatio.cs" />
+    <Compile Include="MPR_OPEX\NEASharingRatio.cs" />
+    <Compile Include="MPR_OPEX\NEASharingRatioFcy.cs" />
+    <Compile Include="MPR_OPEX\OpexAbcExemption.cs" />
+    <Compile Include="MPR_OPEX\OpexBasisMapping.cs" />
+    <Compile Include="MPR_OPEX\OpexBusinessRule.cs" />
+    <Compile Include="MPR_OPEX\OpexCheckList.cs" />
+    <Compile Include="MPR_OPEX\OpexGLBasis.cs" />
+    <Compile Include="MPR_OPEX\OpexGLMapping.cs" />
+    <Compile Include="MPR_OPEX\OpexMISReplacement.cs" />
+    <Compile Include="MPR_OPEX\OpexRawExpense.cs" />
+    <Compile Include="MPR_OPEX\OpexReport.cs" />
+    <Compile Include="MPR_OPEX\Opex_Management_Tree.cs" />
+    <Compile Include="MPR_OPEX\StaffCost.cs" />
+    <Compile Include="MPR_PL\GLException.cs" />
+    <Compile Include="MPR_PL\GLMIS.cs" />
+    <Compile Include="MPR_PL\GLReclassification.cs" />
+    <Compile Include="MPR_PL\GLRevenueShare.cs" />
+    <Compile Include="MPR_PL\MPRGLMapping.cs" />
+    <Compile Include="MPR_PL\MPRPLDerivedCaption.cs" />
+    <Compile Include="MPR_PL\MPRTotalLine.cs" />
+    <Compile Include="MPR_PL\MPRTotalLineMakeup.cs" />
+    <Compile Include="MPR_PL\PLCaption.cs" />
+    <Compile Include="MPR_PL\PLIncomeReport.cs" />
+    <Compile Include="MPR_PL\PLIncomeReportAdjustment.cs" />
+    <Compile Include="MPR_OPEX\CheckList.cs" />
+    <Compile Include="MPR_PL\ProcessData.cs" />
+    <Compile Include="MPR_PL\IncomeCentralVaultSchedule.cs" />
+    <Compile Include="MPR_PL\Revenue.cs" />
+    <Compile Include="MPR_PL\RevenueBudget.cs" />
+    <Compile Include="MPR_PL\RevenueBudgetOfficer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fintrak.Shared.Common\Fintrak.Shared.Common.csproj">
+      <Project>{d188c9ca-c170-4496-8cad-c6eee1f3d7d8}</Project>
+      <Name>Fintrak.Shared.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fintrak.Shared.Core.Framework\Fintrak.Shared.Core.Framework.csproj">
+      <Project>{36c91371-851e-4720-9eb4-53481a50d8c2}</Project>
+      <Name>Fintrak.Shared.Core.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fintrak.Shared.MPR.Framework\Fintrak.Shared.MPR.Framework.csproj">
+      <Project>{dff2e84e-8f0a-413e-ac5a-bc64adb43adc}</Project>
+      <Name>Fintrak.Shared.MPR.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

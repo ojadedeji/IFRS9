@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F304AB3-1C95-44C3-96B9-7CB62647FD64}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fintrak.Shared.Budget.Entities</RootNamespace>
+    <AssemblyName>Fintrak.Shared.Budget.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Capex\CapexCost.cs" />
+    <Compile Include="Capex\DepreciationRate.cs" />
+    <Compile Include="Capex\CapexItem.cs" />
+    <Compile Include="Capex\CapexEntry.cs" />
+    <Compile Include="Core\OperationReview.cs" />
+    <Compile Include="Core\Operation.cs" />
+    <Compile Include="Fee\FeeSharedRatio.cs" />
+    <Compile Include="Fee\FeeSharedExemption.cs" />
+    <Compile Include="Fee\FeeVolumeBasedRate.cs" />
+    <Compile Include="Fee\FeeVolumeBasedSetup.cs" />
+    <Compile Include="Fee\FeeItem.cs" />
+    <Compile Include="Fee\FeeMovement.cs" />
+    <Compile Include="Fee\FeeCaption.cs" />
+    <Compile Include="Fee\FeeCalculationType.cs" />
+    <Compile Include="Fee\FeeCategory.cs" />
+    <Compile Include="Fee\FeeEntry.cs" />
+    <Compile Include="Fee\FeeGroup.cs" />
+    <Compile Include="Fee\FeeGroupEntry.cs" />
+    <Compile Include="Opex\OpexVolumeBasedRate.cs" />
+    <Compile Include="Opex\OpexVolumeBasedSetup.cs" />
+    <Compile Include="Opex\OpexItem.cs" />
+    <Compile Include="Opex\OpexCategory.cs" />
+    <Compile Include="Opex\OpexEntry.cs" />
+    <Compile Include="Revenue\ProductPoolRate.cs" />
+    <Compile Include="Revenue\RevenueIncExp.cs" />
+    <Compile Include="Revenue\RevenuePool.cs" />
+    <Compile Include="Revenue\ProductInterestRate.cs" />
+    <Compile Include="Revenue\ProductVolumeBasedRate.cs" />
+    <Compile Include="Revenue\ProductSharedRatio.cs" />
+    <Compile Include="Revenue\ProductCategory.cs" />
+    <Compile Include="Revenue\ProductClassification.cs" />
+    <Compile Include="Revenue\Product.cs" />
+    <Compile Include="Revenue\ProductVolumeBasedSetup.cs" />
+    <Compile Include="Revenue\RevenueCaption.cs" />
+    <Compile Include="Revenue\ProductGroup.cs" />
+    <Compile Include="Revenue\RevenueSetting.cs" />
+    <Compile Include="Revenue\ProductGroupEntry.cs" />
+    <Compile Include="StaffCost\TeamPayClassification.cs" />
+    <Compile Include="TransactionEntityBase.cs" />
+    <Compile Include="Capex\CapexCategory.cs" />
+    <Compile Include="Core\PolicyLevel.cs" />
+    <Compile Include="Core\GeneralSetting.cs" />
+    <Compile Include="Core\Policy.cs" />
+    <Compile Include="Core\PrimaryLock.cs" />
+    <Compile Include="Core\SecondaryLock.cs" />
+    <Compile Include="Core\SecondaryLockLevel.cs" />
+    <Compile Include="Core\ModificationLevel.cs" />
+    <Compile Include="Core\BudgetingLevel.cs" />
+    <Compile Include="StaffCost\StaffCost.cs" />
+    <Compile Include="StaffCost\StaffCount.cs" />
+    <Compile Include="StaffCost\PayStructure.cs" />
+    <Compile Include="StaffCost\PayClassification.cs" />
+    <Compile Include="StaffCost\Grade.cs" />
+    <Compile Include="Team\OfficerDetail.cs" />
+    <Compile Include="Team\TeamClassification.cs" />
+    <Compile Include="Team\Team.cs" />
+    <Compile Include="Team\TeamDefinition.cs" />
+    <Compile Include="Team\TeamSetting.cs" />
+    <Compile Include="Team\TeamClassificationType.cs" />
+    <Compile Include="Team\TeamUser.cs" />
+    <Compile Include="Core\Module.cs" />
+    <Compile Include="Core\Currency.cs" />
+    <Compile Include="Core\CurrencyRate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fintrak.Shared.Budget.Framework\Fintrak.Shared.Budget.Framework.csproj">
+      <Project>{72c4c73d-862b-4d45-b4fb-229fe0194df1}</Project>
+      <Name>Fintrak.Shared.Budget.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fintrak.Shared.Common\Fintrak.Shared.Common.csproj">
+      <Project>{d188c9ca-c170-4496-8cad-c6eee1f3d7d8}</Project>
+      <Name>Fintrak.Shared.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,33 @@
+Menu
+--Settings
+---Modules
+---Configuration
+----General
+----Fiscal Years ---Edit Fiscal Year --- Edit Fiscal Period
+---Users
+----Account
+----Roles
+---Accessibility
+----Menu
+---Manage Audittrail
+----Audittrails
+
+
+--Lona amortization
+
+
+--xyzzzzzz
+
+--Settings
+---Modules
+---Configuration
+----General
+----Fiscal Years ---Edit Fiscal Year --- Edit Fiscal Period
+---Users
+----Account
+----Roles
+---Accessibility
+----Menu
+---Manage Audittrail
+----Audittrails
+

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{41806568-A3F7-4492-BDE9-024F51CD8E51}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fintrak.Shared.Basic.Entities</RootNamespace>
+    <AssemblyName>Fintrak.Shared.Basic.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Financial Instrument\FairValueBasisExemption.cs" />
+    <Compile Include="Financial Instrument\FairValueBasisMap.cs" />
+    <Compile Include="Finstat_Core\IFRSMapping.cs" />
+    <Compile Include="IFRS Loans\IndividualImpairment.cs" />
+    <Compile Include="IFRS Loans\LoanIRRData.cs" />
+    <Compile Include="IFRS Loans\LoanDetails.cs" />
+    <Compile Include="IFRS Loans\IntegralFee.cs" />
+    <Compile Include="IFRS Loans\LoanPrimaryData.cs" />
+    <Compile Include="IFRS Loans\IndividualSchedule.cs" />
+    <Compile Include="IFRS Loans\TBillsComputationResult.cs" />
+    <Compile Include="IFRS Loans\LoansImpairmentResult.cs" />
+    <Compile Include="IFRS Loans\LoanSchedule.cs" />
+    <Compile Include="IFRS Loans\LoanPeriodicSchedule.cs" />
+    <Compile Include="IFRS Loans\EquityStockComputationResult.cs" />
+    <Compile Include="IFRS Loans\BondPeriodicSchedule.cs" />
+    <Compile Include="IFRS Loans\BondComputationResultZero.cs" />
+    <Compile Include="IFRS Loans\CollateralCategory.cs" />
+    <Compile Include="IFRS Loans\CollateralInformation.cs" />
+    <Compile Include="IFRS Loans\CollateralRealizationPeriod.cs" />
+    <Compile Include="IFRS Loans\BondComputation.cs" />
+    <Compile Include="IFRS Loans\CollateralType.cs" />
+    <Compile Include="IFRS Loans\CreditRiskRating.cs" />
+    <Compile Include="IFRS Loans\ImpairmentOverride.cs" />
+    <Compile Include="IFRS Loans\LoanSetup.cs" />
+    <Compile Include="IFRS Loans\Product.cs" />
+    <Compile Include="IFRS Loans\ScheduleType.cs" />
+    <Compile Include="IFRS Loans\WatchListedLoan.cs" />
+    <Compile Include="IFRS_Core\IFRSRegistry.cs" />
+    <Compile Include="Finstat_Core\IFRSBudget.cs" />
+    <Compile Include="Finstat_Core\TransactionDetail.cs" />
+    <Compile Include="Finstat_Core\IFRSReport.cs" />
+    <Compile Include="Finstat_Core\PostingDetail.cs" />
+    <Compile Include="Finstat_Core\GLAdjustment.cs" />
+    <Compile Include="Finstat_Core\TrialBalance.cs" />
+    <Compile Include="Finstat_Core\TrialBalanceGap.cs" />
+    <Compile Include="Finstat_Core\InstrumentTypeGLMap.cs" />
+    <Compile Include="Finstat_Core\InstrumentType.cs" />
+    <Compile Include="Finstat_Core\GLType.cs" />
+    <Compile Include="Finstat_Core\GLMapping.cs" />
+    <Compile Include="Finstat_Core\AutoPostingTemplate.cs" />
+    <Compile Include="IFRS_Core\DerivedCaption.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fintrak.Shared.Basic.Framework\Fintrak.Shared.Basic.Framework.csproj">
+      <Project>{ab5b536a-8d6d-4531-98ba-7a6171d7b096}</Project>
+      <Name>Fintrak.Shared.Basic.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fintrak.Shared.Common\Fintrak.Shared.Common.csproj">
+      <Project>{D188C9CA-C170-4496-8CAD-C6EEE1F3D7D8}</Project>
+      <Name>Fintrak.Shared.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fintrak.Shared.Core.Entities\Fintrak.Shared.Core.Entities.csproj">
+      <Project>{86d9d66b-c03b-4643-a9fb-99f96d0a52bc}</Project>
+      <Name>Fintrak.Shared.Core.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fintrak.Shared.Core.Framework\Fintrak.Shared.Core.Framework.csproj">
+      <Project>{36c91371-851e-4720-9eb4-53481a50d8c2}</Project>
+      <Name>Fintrak.Shared.Core.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

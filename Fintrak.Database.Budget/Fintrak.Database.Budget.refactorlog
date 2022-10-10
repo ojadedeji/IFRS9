@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="cd29c718-702a-4b2a-8f81-a9ea9360d464" ChangeDateTime="03/03/2016 21:46:42">
+    <Property Name="ElementName" Value="[dbo].[bud_module].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[bud_module]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ModuleId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ade9b4b2-d2e7-44f8-af24-035ee8e534ae" ChangeDateTime="03/08/2016 16:40:07">
+    <Property Name="ElementName" Value="[dbo].[bud_currency].[ModuleId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[bud_currency]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CurrencyId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c8bdf3b5-06e9-4715-b337-35fbdb557613" ChangeDateTime="03/08/2016 16:52:08">
+    <Property Name="ElementName" Value="[dbo].[bud_team_classification_type].[GradeId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[bud_team_classification_type]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TeamClassificationTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="163c0a07-e77c-412f-ad58-ac155645a1d6" ChangeDateTime="03/08/2016 16:52:21">
+    <Property Name="ElementName" Value="[dbo].[bud_team_classification_type].[Description]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[bud_team_classification_type]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Position" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="bdd88967-f35a-429b-a186-32e93620232b" ChangeDateTime="03/08/2016 16:54:45">
+    <Property Name="ElementName" Value="[dbo].[bud_team_classification].[TeamClassificationTypeId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[bud_team_classification]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TeamClassificationId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ce8da60d-a452-408d-8fa0-2ef476f64492" ChangeDateTime="03/08/2016 17:27:23">
+    <Property Name="ElementName" Value="[dbo].[bud_team_classification].[ClassificationType]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[bud_team_classification]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ClassificationTypeCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0a84970f-c291-4edc-84f7-cbbe2c76d7ae" ChangeDateTime="03/10/2016 22:21:01">
+    <Property Name="ElementName" Value="[dbo].[AK_bud_general_setting_code]" />
+    <Property Name="ElementType" Value="SqlUniqueConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[bud_general_setting]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[AK_bud_general_setting_year]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ea813e4e-d395-4f17-a17f-2d6dfbb55a3c" ChangeDateTime="03/10/2016 22:25:10">
+    <Property Name="ElementName" Value="[dbo].[AK_bud_team_setting_code]" />
+    <Property Name="ElementType" Value="SqlUniqueConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[bud_team_setting]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[AK_bud_team_setting_year]" />
+  </Operation>
+</Operations>

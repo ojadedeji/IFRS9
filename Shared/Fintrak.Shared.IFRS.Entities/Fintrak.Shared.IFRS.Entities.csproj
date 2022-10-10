@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{089146EB-3FB8-4519-BAB8-81F82AB4092E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fintrak.Shared.IFRS.Entities</RootNamespace>
+    <AssemblyName>Fintrak.Shared.IFRS.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentValidation.8.5.1\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extracted Data\Cashflow.cs" />
+    <Compile Include="Extracted Data\CollateralDetails.cs" />
+    <Compile Include="Extracted Data\DepositRepaymentSchedule.cs" />
+    <Compile Include="Extracted Data\FacClassConsolidated.cs" />
+    <Compile Include="Extracted Data\FacOBEStaging.cs" />
+    <Compile Include="Extracted Data\FacRating.cs" />
+    <Compile Include="Extracted Data\FacStaging.cs" />
+    <Compile Include="Extracted Data\HCClassification.cs" />
+    <Compile Include="Extracted Data\OBExposure.cs" />
+    <Compile Include="Extracted Data\OBExposureCCF.cs" />
+    <Compile Include="Extracted Data\ProbabilityWeight.cs" />
+    <Compile Include="Extracted Data\NseIndex.cs" />
+    <Compile Include="Extracted Data\IfrsCustomer.cs" />
+    <Compile Include="Extracted Data\IfrsCustomerAccount.cs" />
+    <Compile Include="Extracted Data\EclWeightedAvg.cs" />
+    <Compile Include="Extracted Data\LiabilityRepaymentSchedule.cs" />
+    <Compile Include="Extracted Data\LoanInterestRate.cs" />
+    <Compile Include="Extracted Data\LoanCommitment.cs" />
+    <Compile Include="Extracted Data\OffBalanceExposure.cs" />
+    <Compile Include="Extracted Data\IntegralFee.cs" />
+    <Compile Include="Extracted Data\LoanDetails.cs" />
+    <Compile Include="Extracted Data\Borrowings.cs" />
+    <Compile Include="Extracted Data\LoanPryMoratorium.cs" />
+    <Compile Include="Extracted Data\LoanPry.cs" />
+    <Compile Include="Extracted Data\IFRSBonds.cs" />
+    <Compile Include="Extracted Data\IFRSTbills.cs" />
+    <Compile Include="Extracted Data\InputDetail.cs" />
+    <Compile Include="Extracted Data\Placement.cs" />
+    <Compile Include="Financial Instrument\FairValueBasisExemption.cs" />
+    <Compile Include="Financial Instrument\FairValueBasisMap.cs" />
+    <Compile Include="Finstat_Core\AutoPostingTemplate.cs" />
+    <Compile Include="Finstat_Core\GLAArchive.cs" />
+    <Compile Include="Finstat_Core\GLAdjustment.cs" />
+    <Compile Include="Finstat_Core\GLMappingMgt.cs" />
+    <Compile Include="Finstat_Core\GLMapping.cs" />
+    <Compile Include="Finstat_Core\GLType.cs" />
+    <Compile Include="Finstat_Core\ChangesInEquity.cs" />
+    <Compile Include="Finstat_Core\IFRSBudget.cs" />
+    <Compile Include="Finstat_Core\IFRSMapping.cs" />
+    <Compile Include="Finstat_Core\IFRSReport.cs" />
+    <Compile Include="Finstat_Core\InstrumentType.cs" />
+    <Compile Include="Finstat_Core\InstrumentTypeGLMap.cs" />
+    <Compile Include="Finstat_Core\LedgerDetailSummary.cs" />
+    <Compile Include="Finstat_Core\Calendar.cs" />
+    <Compile Include="Finstat_Core\PostingDetailContracts.cs" />
+    <Compile Include="Finstat_Core\RatioCaption.cs" />
+    <Compile Include="Finstat_Core\RatioDetail.cs" />
+    <Compile Include="Finstat_Core\RevenueGLMapping.cs" />
+    <Compile Include="Finstat_Core\PostingDetail.cs" />
+    <Compile Include="Finstat_Core\TransactionDetail.cs" />
+    <Compile Include="Finstat_Core\TrialBalance.cs" />
+    <Compile Include="Finstat_Core\TrialBalanceConsolidated.cs" />
+    <Compile Include="Finstat_Core\TrialBalanceConsolidatedIFRS.cs" />
+    <Compile Include="Finstat_Core\trialbalancegap.cs" />
+    <Compile Include="IFRS Loans\BondComputation.cs" />
+    <Compile Include="IFRS Loans\BondComputationResultZero.cs" />
+    <Compile Include="IFRS Loans\BondPeriodicSchedule.cs" />
+    <Compile Include="IFRS Loans\BondSummary.cs" />
+    <Compile Include="IFRS Loans\CollateralCategory.cs" />
+    <Compile Include="IFRS Loans\CollateralInformation.cs" />
+    <Compile Include="IFRS Loans\CollateralRealizationPeriod.cs" />
+    <Compile Include="IFRS Loans\CollateralType.cs" />
+    <Compile Include="IFRS Loans\CreditRiskRating.cs" />
+    <Compile Include="IFRS Loans\EquityStockComputationResult.cs" />
+    <Compile Include="IFRS Loans\ImpairmentOverride.cs" />
+    <Compile Include="IFRS Loans\IndividualImpairment.cs" />
+    <Compile Include="IFRS Loans\IndividualSchedule.cs" />
+    <Compile Include="IFRS Loans\IntegralFee1.cs" />
+    <Compile Include="IFRS Loans\LoanDetails.cs" />
+    <Compile Include="IFRS Loans\LoanIRRData.cs" />
+    <Compile Include="IFRS Loans\BorrowingPeriodicSchedule.cs" />
+    <Compile Include="IFRS Loans\LoanPeriodicSchedule.cs" />
+    <Compile Include="IFRS Loans\LoanPrimaryData.cs" />
+    <Compile Include="IFRS Loans\BorrowingSchedule.cs" />
+    <Compile Include="IFRS Loans\LoanSchedule.cs" />
+    <Compile Include="IFRS Loans\LoanSetup.cs" />
+    <Compile Include="IFRS Loans\LoansImpairmentResult.cs" />
+    <Compile Include="IFRS Loans\Product.cs" />
+    <Compile Include="IFRS Loans\ScheduleType.cs" />
+    <Compile Include="IFRS Loans\TBillsComputationResult.cs" />
+    <Compile Include="IFRS Loans\WatchlistedLoan.cs" />
+    <Compile Include="IFRS9\AdjustedMatrix.cs" />
+    <Compile Include="IFRS9\CashFlowRestructure.cs" />
+    <Compile Include="IFRS9\CreditIndex.cs" />
+    <Compile Include="IFRS9\CummulativeMatrix.cs" />
+    <Compile Include="IFRS9\CummulativePDD.cs" />
+    <Compile Include="IFRS9\FacilitiesStageMigration.cs" />
+    <Compile Include="IFRS9\HistoricalMacroVariableInput.cs" />
+    <Compile Include="IFRS9\IfrsStaffBenefitsLoansReport.cs" />
+    <Compile Include="IFRS9\IfrsStaffBenefitsReportSummary.cs" />
+    <Compile Include="IFRS9\IfrsStaffBenefitsLoans.cs" />
+    <Compile Include="IFRS9\IfrsStatisticalRelationshipExpect.cs" />
+    <Compile Include="IFRS9\IfrsModicationSummary.cs" />
+    <Compile Include="IFRS9\IfrsRepaymentSchedule.cs" />
+    <Compile Include="IFRS9\IfrsDescriptionLedger.cs" />
+    <Compile Include="IFRS9\IfrsLoanIRRData.cs" />
+    <Compile Include="IFRS9\IfrsLifetimePDStages.cs" />
+    <Compile Include="IFRS9\SubSector.cs" />
+    <Compile Include="IFRS9\UEQUnquotedEquitySummaryReport.cs" />
+    <Compile Include="IFRS9\UnquotedEquityCountryRiskDisc.cs" />
+    <Compile Include="IFRS9\IfrsBenefitsStaffLoan.cs" />
+    <Compile Include="IFRS9\IfrsGetCashFlowEIR.cs" />
+    <Compile Include="IFRS9\IfrsMevRaltionship.cs" />
+    <Compile Include="IFRS9\IfrsTransitionalMatrix.cs" />
+    <Compile Include="IFRS9\UnquotedEquityMKTRDisc.cs" />
+    <Compile Include="IFRS9\UnquotedEquityMarketabilityDiscount.cs" />
+    <Compile Include="IFRS9\UnquotedEquitySummaryInput.cs" />
+    <Compile Include="IFRS9\UnquotedEquityReportPB.cs" />
+    <Compile Include="IFRS9\UnquotedEquityPEPBRatio.cs" />
+    <Compile Include="IFRS9\UnquotedEquityMedAVGPE.cs" />
+    <Compile Include="IFRS9\UnquotedEquityMedAVGPB.cs" />
+    <Compile Include="IFRS9\UnquotedEquityInput.cs" />
+    <Compile Include="IFRS9\UnquotedEquityHistoricalFV.cs" />
+    <Compile Include="IFRS9\IfrsCureRatesRecoveryRates.cs" />
+    <Compile Include="IFRS9\IfrsDataValidator.cs" />
+    <Compile Include="IFRS9\IfrsInvestmentECLSummary.cs" />
+    <Compile Include="IFRS9\Remark.cs" />
+    <Compile Include="IFRS9\Test.cs" />
+    <Compile Include="IFRS9\IfrsRecoveryOutputnewAccessModel.cs" />
+    <Compile Include="IFRS9\IfrsAccessttcDownTurnResult.cs" />
+    <Compile Include="IFRS9\IfrsAccessLGDOutput.cs" />
+    <Compile Include="IFRS9\IfrsConfidenceIntervalAbp.cs" />
+    <Compile Include="IFRS9\IfrsAccessEstimateRecoveryOutput.cs" />
+    <Compile Include="IFRS9\IfrsAccessLGDDiscountFactorOutput.cs" />
+    <Compile Include="IFRS9\IfrsHistoricalMEVAbp.cs" />
+    <Compile Include="IFRS9\IfrsLoanMissPayment.cs" />
+    <Compile Include="IFRS9\IfrsMevForcastabp.cs" />
+    <Compile Include="IFRS9\IfrsOverdraftData.cs" />
+    <Compile Include="IFRS9\IfrsScalarUpload.cs" />
+    <Compile Include="IFRS9\LoanRestructurePVCashFlow.cs" />
+    <Compile Include="IFRS9\MacroEconomicForeCast.cs" />
+    <Compile Include="IFRS9\MacroNPL.cs" />
+    <Compile Include="IFRS9\MarginalOutput.cs" />
+    <Compile Include="IFRS9\Mevlisting.cs" />
+    <Compile Include="IFRS9\ModificationGainorLoss.cs" />
+    <Compile Include="IFRS9\PDMigrationMatrixFinal.cs" />
+    <Compile Include="IFRS9\RegressionCofficient.cs" />
+    <Compile Include="IFRS9\Regressionweights.cs" />
+    <Compile Include="IFRS9\RestructureInfo.cs" />
+    <Compile Include="IFRS9\SegmentPerformance.cs" />
+    <Compile Include="IFRS9\AmortizationOutput.cs" />
+    <Compile Include="IFRS9\BondsECLComputationResult.cs" />
+    <Compile Include="IFRS9\BondsECLResult.cs" />
+    <Compile Include="IFRS9\CashFlowTB.cs" />
+    <Compile Include="IFRS9\CcfAnalysisOverDraftSTRLB.cs" />
+    <Compile Include="IFRS9\CollateralGrowthRate.cs" />
+    <Compile Include="IFRS9\CollateralRecAmtStaging.cs" />
+    <Compile Include="IFRS9\ConsolidatedLoans.cs" />
+    <Compile Include="IFRS9\CummulativeDefaultAmt.cs" />
+    <Compile Include="IFRS9\CummulativeLifeTimePD.cs" />
+    <Compile Include="IFRS9\CummulativePD.cs" />
+    <Compile Include="IFRS9\FacilityClassification.cs" />
+    <Compile Include="IFRS9\FacilitiyStaging.cs" />
+    <Compile Include="IFRS9\HistoricalDefaultFreq.cs" />
+    <Compile Include="IFRS9\ifrsexceptionreport.cs" />
+    <Compile Include="IFRS9\IfrsLgdProjections.cs" />
+    <Compile Include="IFRS9\IfrsLoansInfo.cs" />
+    <Compile Include="IFRS9\IfrsPDProjection.cs" />
+    <Compile Include="IFRS9\MarginalPdODDistr.cs" />
+    <Compile Include="IFRS9\OverdraftLGDComputation.cs" />
+    <Compile Include="IFRS9\IfrsBondLGD.cs" />
+    <Compile Include="IFRS9\IfrsBondsMonthlyEAD.cs" />
+    <Compile Include="IFRS9\IfrsInvestment.cs" />
+    <Compile Include="IFRS9\IfrsLoanClassification.cs" />
+    <Compile Include="IFRS9\IfrsMarginalPDByScenario.cs" />
+    <Compile Include="IFRS9\OverdraftMonthlyEAD.cs" />
+    <Compile Include="IFRS9\IfrsMonthlyEAD.cs" />
+    <Compile Include="IFRS9\IfrsMonthlyForwardPDWithMacroVar.cs" />
+    <Compile Include="IFRS9\IfrsPDTermStructure.cs" />
+    <Compile Include="IFRS9\IfrsProjectedCummDefaultFrq.cs" />
+    <Compile Include="IFRS9\InvestmentMarginalPd.cs" />
+    <Compile Include="IFRS9\LgdComptResult.cs" />
+    <Compile Include="IFRS9\LoanECLResult.cs" />
+    <Compile Include="IFRS9\LoansECLComputationResult.cs" />
+    <Compile Include="IFRS9\LoanClassificationSICRSignFlag.cs" />
+    <Compile Include="IFRS9\LoanSignificantFlag.cs" />
+    <Compile Include="IFRS9\MarginalCCFPivotSTRLB.cs" />
+    <Compile Include="IFRS9\MarginalCCFStr.cs" />
+    <Compile Include="IFRS9\MarginalPddSTRLB.cs" />
+    <Compile Include="IFRS9\MarginalPdObeDistr.cs" />
+    <Compile Include="IFRS9\MonthlyObeEadSTRLB.cs" />
+    <Compile Include="IFRS9\ObeEclComputation.cs" />
+    <Compile Include="IFRS9\ObeECLResult.cs" />
+    <Compile Include="IFRS9\ObeLGDComptResult.cs" />
+    <Compile Include="IFRS9\ODEclComputationResult.cs" />
+    <Compile Include="IFRS9\OdECLResult.cs" />
+    <Compile Include="IFRS9\PostingGLMapping.cs" />
+    <Compile Include="IFRS9\ProbabilisticModel.cs" />
+    <Compile Include="IFRS9\SICRParameters.cs" />
+    <Compile Include="IFRS9\TBillEclComputationResult.cs" />
+    <Compile Include="IFRS9\RegressionOutput.cs" />
+    <Compile Include="IFRS9\LgdInputFactor.cs" />
+    <Compile Include="IFRS9\MacroeconomicsVariableScenario.cs" />
+    <Compile Include="IFRS9\LoanCommitmentComputationResult.cs" />
+    <Compile Include="IFRS9\ECLInputRetail.cs" />
+    <Compile Include="IFRS9\IfrsCorporatePdSeries.cs" />
+    <Compile Include="IFRS9\IfrsCustomerPD.cs" />
+    <Compile Include="IFRS9\IfrsFinalRetailOutput.cs" />
+    <Compile Include="IFRS9\CollateralInput.cs" />
+    <Compile Include="IFRS9\Assumption.cs" />
+    <Compile Include="IFRS9\SPCumulativePD.cs" />
+    <Compile Include="IFRS9\StaffLoansComputationResult.cs" />
+    <Compile Include="IFRS9\ImpairmentCorporate.cs" />
+    <Compile Include="IFRS9\ImpairmentInvestment.cs" />
+    <Compile Include="IFRS9\ImpairmentResultOBE.cs" />
+    <Compile Include="IFRS9\ImpairmentResultRetail.cs" />
+    <Compile Include="IFRS9\OffBalancesheetECL.cs" />
+    <Compile Include="IFRS9\HistoricalDefaultedAccounts.cs" />
+    <Compile Include="IFRS9\ComputedForcastedPDLGDForeign.cs" />
+    <Compile Include="IFRS9\IfrsCorporateEcl.cs" />
+    <Compile Include="IFRS9\IfrsSectorCCF.cs" />
+    <Compile Include="IFRS9\IfrsLgdScenarioByInstrument.cs" />
+    <Compile Include="IFRS9\IfrsRetailPdSeries.cs" />
+    <Compile Include="IFRS9\IfrsPdSeriesByRating.cs" />
+    <Compile Include="IFRS9\InvestmentOthersECL.cs" />
+    <Compile Include="IFRS9\LcBgEclComputationResult.cs" />
+    <Compile Include="IFRS9\LgdComputationResultPlacement.cs" />
+    <Compile Include="IFRS9\MacrovariableEstimate.cs" />
+    <Compile Include="IFRS9\MacroVariableRecoveryRates.cs" />
+    <Compile Include="IFRS9\MacroEconomicsNPL.cs" />
+    <Compile Include="IFRS9\MonthlyDiscountFactor.cs" />
+    <Compile Include="IFRS9\MonthlyDiscountFactorBond.cs" />
+    <Compile Include="IFRS9\MonthlyDiscountFactorPlacement.cs" />
+    <Compile Include="IFRS9\PlacementEclComputationResult.cs" />
+    <Compile Include="IFRS9\BondEclComputationResult.cs" />
+    <Compile Include="IFRS9\EclComputationResult.cs" />
+    <Compile Include="IFRS9\EuroBondSpread.cs" />
+    <Compile Include="IFRS9\PlacementComputationResult.cs" />
+    <Compile Include="IFRS9\LgdComputationResult.cs" />
+    <Compile Include="IFRS9\BondMarginalPDDistribution.cs" />
+    <Compile Include="IFRS9\MarginalPDDistributionPlacement.cs" />
+    <Compile Include="IFRS9\MarginalPDDistribution.cs" />
+    <Compile Include="IFRS9\LocalBondSpread.cs" />
+    <Compile Include="IFRS9\BucketExposure.cs" />
+    <Compile Include="IFRS9\CCFModelling.cs" />
+    <Compile Include="IFRS9\ComputedForcastedPDLGD.cs" />
+    <Compile Include="IFRS9\EclCalculationModel.cs" />
+    <Compile Include="IFRS9\ECLComparism.cs" />
+    <Compile Include="IFRS9\ExternalRating.cs" />
+    <Compile Include="IFRS9\FairValuationModel.cs" />
+    <Compile Include="IFRS9\ForecastedMacroeconimcsScenario.cs" />
+    <Compile Include="IFRS9\ForecastedMacroeconimcsSensitivity.cs" />
+    <Compile Include="IFRS9\HistoricalClassification.cs" />
+    <Compile Include="IFRS9\HistoricalSectorialLGD.cs" />
+    <Compile Include="IFRS9\HistoricalSectorialPD.cs" />
+    <Compile Include="IFRS9\HistoricalSectorRating.cs" />
+    <Compile Include="IFRS9\IfrsEquityUnqouted.cs" />
+    <Compile Include="IFRS9\IfrsStocksMapping.cs" />
+    <Compile Include="IFRS9\IfrsStocksPrimaryData.cs" />
+    <Compile Include="IFRS9\InternalRatingBased.cs" />
+    <Compile Include="IFRS9\LifeTimePDClassification.cs" />
+    <Compile Include="IFRS9\LoanBucketDistribution.cs" />
+    <Compile Include="IFRS9\LoanSpreadScenario.cs" />
+    <Compile Include="IFRS9\LoanSpreadSensitivity.cs" />
+    <Compile Include="IFRS9\MacroEconomic.cs" />
+    <Compile Include="IFRS9\MacroEconomicHistorical.cs" />
+    <Compile Include="IFRS9\MacroEconomicVariable.cs" />
+    <Compile Include="IFRS9\MacroeconomicVDisplay.cs" />
+    <Compile Include="IFRS9\MarkovMatrix.cs" />
+    <Compile Include="IFRS9\NotchDifference.cs" />
+    <Compile Include="IFRS9\PitFormular.cs" />
+    <Compile Include="IFRS9\ForeignEADExchangeRate.cs" />
+    <Compile Include="IFRS9\PiTPD.cs" />
+    <Compile Include="IFRS9\PiTPDComparism.cs" />
+    <Compile Include="IFRS9\PortfolioExposure.cs" />
+    <Compile Include="IFRS9\PortfolioExposureChart.cs" />
+    <Compile Include="IFRS9\ProbabilityWeighted.cs" />
+    <Compile Include="IFRS9\RatingMapping.cs" />
+    <Compile Include="IFRS9\Reconciliation.cs" />
+    <Compile Include="IFRS9\SandPRating.cs" />
+    <Compile Include="IFRS9\Sector.cs" />
+    <Compile Include="IFRS9\SectorialExposure.cs" />
+    <Compile Include="IFRS9\SectorialExposureChart .cs" />
+    <Compile Include="IFRS9\SectorialRegressedLGD.cs" />
+    <Compile Include="IFRS9\SectorialRegressedPD.cs" />
+    <Compile Include="IFRS9\SectorMapping.cs" />
+    <Compile Include="IFRS9\SectorVariableMapping.cs" />
+    <Compile Include="IFRS9\SetUp.cs" />
+    <Compile Include="IFRS9\SummaryReport.cs" />
+    <Compile Include="IFRS9\SummaryReportChart.cs" />
+    <Compile Include="IFRS9\Transition.cs" />
+    <Compile Include="IFRS9\UnquotedEquityFairvalueResult.cs" />
+    <Compile Include="IFRS_Core\IFRSRevacctRegistry.cs" />
+    <Compile Include="IFRS_Core\IFRSReportPack.cs" />
+    <Compile Include="IFRS_Core\DerivedCaption.cs" />
+    <Compile Include="IFRS_Core\IFRSRegistry.cs" />
+    <Compile Include="IFRS_Core\InterimQualitativeNote.cs" />
+    <Compile Include="IFRS_Core\MultiSelectDropDown.cs" />
+    <Compile Include="IFRS_Core\QualitativeNote.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fintrak.Shared.Common\Fintrak.Shared.Common.csproj">
+      <Project>{d188c9ca-c170-4496-8cad-c6eee1f3d7d8}</Project>
+      <Name>Fintrak.Shared.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fintrak.Shared.IFRS.Framework\Fintrak.Shared.IFRS.Framework.csproj">
+      <Project>{fe9d6d20-6338-4694-9edc-f72adc3b391f}</Project>
+      <Name>Fintrak.Shared.IFRS.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

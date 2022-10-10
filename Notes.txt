@@ -1,0 +1,1 @@
+[assembly: ContractNamespace("http://www.fintraksoftware.com", ClrNamespace = "")]

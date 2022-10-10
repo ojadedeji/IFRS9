@@ -1,0 +1,122 @@
+USE [DataBaseName]
+GO
+
+/****** Object:  Table [dbo].[ifrs_confidence_interval]    Script Date: 06/07/2021 18:35:54 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ifrs_confidence_interval](
+	[IntervalId] [int] IDENTITY(1,1) NOT NULL,
+	[ci_level] [float] NULL,
+	[z_score] [float] NULL,
+	[Active] [bit] NULL,
+	[Deleted] [bit] NULL,
+	[CreatedBy] [varchar](50) NULL,
+	[CreatedOn] [datetime] NULL,
+	[UpdatedBy] [varchar](50) NULL,
+	[UpdatedOn] [datetime] NULL,
+	[RowVersion] [timestamp] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[IntervalId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+/****** Object:  Table [dbo].[ifrs_historical_MEV]    Script Date: 06/07/2021 18:37:58 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ifrs_historical_MEV](
+	[historicalMevId] [int] IDENTITY(1,1) NOT NULL,
+	[periodic_date] [date] NULL,
+	[period_in_quarter] [varchar](10) NULL,
+	[factor] [float] NULL,
+	[mevid] [varchar](50) NULL,
+	[Active] [bit] NULL,
+	[Deleted] [bit] NULL,
+	[CreatedBy] [varchar](50) NULL,
+	[CreatedOn] [datetime] NULL,
+	[UpdatedBy] [varchar](50) NULL,
+	[UpdatedOn] [datetime] NULL,
+	[RowVersion] [timestamp] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[historicalMevId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+/****** Object:  Table [dbo].[ifrs_Mev_forcast]    Script Date: 06/07/2021 18:39:39 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ifrs_Mev_forcast](
+	[forecast_id] [int] IDENTITY(1,1) NOT NULL,
+	[periodic_date] [date] NULL,
+	[period_in_quarter] [varchar](10) NULL,
+	[factor] [float] NULL,
+	[mevid] [varchar](50) NULL,
+	[Active] [bit] NULL,
+	[Deleted] [bit] NULL,
+	[CreatedBy] [varchar](50) NULL,
+	[CreatedOn] [datetime] NULL,
+	[UpdatedBy] [varchar](50) NULL,
+	[UpdatedOn] [datetime] NULL,
+	[RowVersion] [timestamp] NOT NULL
+) ON [PRIMARY]
+GO
+
+
+/****** Object:  Table [dbo].[ifrs_MEV_listing]    Script Date: 7/6/2021 6:49:13 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ifrs_MEV_listing](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Mev] [varchar](50) NULL,
+	[MevCode] [varchar](10) NULL,
+	[ProbabilityWeighted] [bit] NULL,
+	[Dependent] [bit] NULL,
+	[Active] [bit] NULL,
+	[Deleted] [bit] NULL,
+	[CreatedBy] [varchar](50) NULL,
+	[CreatedOn] [datetime] NULL,
+	[UpdatedBy] [varchar](50) NULL,
+	[UpdatedOn] [datetime] NULL,
+	[RowVersion] [timestamp] NOT NULL
+) ON [PRIMARY]
+GO
+
+
+/****** Object:  Table [dbo].[ifrs_regression_weights]    Script Date: 7/6/2021 6:49:13 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ifrs_regression_weights](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Labels] [varchar](50) NULL,
+	[Weights] [float] NULL,
+	[Pvalue] [float] NULL,
+	[Active] [bit] NULL,
+	[Deleted] [bit] NULL,
+	[CreatedBy] [varchar](50) NULL,
+	[CreatedOn] [datetime] NULL,
+	[UpdatedBy] [varchar](50) NULL,
+	[UpdatedOn] [datetime] NULL,
+	[RowVersion] [timestamp] NOT NULL
+) ON [PRIMARY]
+GO
