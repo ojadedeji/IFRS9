@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Fintrak.Database.Main</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{4059c2ae-644c-4c5b-85a1-7df56ecaf33c}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Fintrak.Database.Main</RootNamespace>
+    <AssemblyName>Fintrak.Database.Main</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Tables\Core" />
+    <Folder Include="Tables\Basic" />
+    <Folder Include="Tables\Basic\Extraction and Process" />
+    <Folder Include="Functions" />
+    <Folder Include="Tables\Basic\IFRS_Core" />
+    <Folder Include="Tables\Basic\Finstat" />
+    <Folder Include="Functions\Core" />
+    <Folder Include="Tables\Basic\MPR_Core" />
+    <Folder Include="Tables\Basic\MPR_BS" />
+    <Folder Include="Tables\Basic\MPR_PL" />
+    <Folder Include="Tables\Core\Enum" />
+    <Folder Include="Tables\Basic\MPR_OPEX" />
+    <Folder Include="Tables\Basic\IFRS_LOANS" />
+    <Folder Include="Tables\Basic\IFRS_FINANCIAL_INTRUMENTS" />
+    <Folder Include="SPP" />
+    <Folder Include="SPP\MPR" />
+    <Folder Include="SPP\MPR\MPR_BS" />
+    <Folder Include="SPP\MPR\MPR_PL" />
+    <Folder Include="Views" />
+    <Folder Include="SPP\Core" />
+    <Folder Include="SPP\IFRS" />
+    <Folder Include="Tables\Basic\CDQM" />
+    <Folder Include="Tables\Basic\Score_Card" />
+    <Folder Include="Tables\Scorecard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Core\Solution.sql" />
+    <Build Include="Tables\Core\Module.sql" />
+    <Build Include="Tables\Core\Role.sql" />
+    <Build Include="Tables\Core\UserSetup.sql" />
+    <Build Include="Tables\Core\UserRole.sql" />
+    <Build Include="Tables\Core\Menu.sql" />
+    <Build Include="Tables\Core\MenuRole.sql" />
+    <Build Include="Tables\Core\AuditTrail.sql" />
+    <Build Include="Tables\Core\FiscalYear.sql" />
+    <Build Include="Tables\Core\FiscalPeriod.sql" />
+    <Build Include="Tables\Core\Company.sql" />
+    <Build Include="Tables\Core\Product.sql" />
+    <Build Include="Tables\Core\ProductType.sql" />
+    <Build Include="Tables\Core\ProductTypeMapping.sql" />
+    <Build Include="Tables\Core\General.sql" />
+    <Build Include="Tables\Basic\Extraction and Process\Extraction.sql" />
+    <Build Include="Tables\Basic\Extraction and Process\ExtractionRole.sql" />
+    <Build Include="Tables\Basic\Extraction and Process\PackageSetup.sql" />
+    <Build Include="Tables\Basic\Extraction and Process\Process.sql" />
+    <Build Include="Tables\Basic\Extraction and Process\ProcessRole.sql" />
+    <Build Include="Tables\Basic\Extraction and Process\ExtractionTrigger.sql" />
+    <Build Include="Tables\Basic\Extraction and Process\ProcessTrigger.sql" />
+    <Build Include="Tables\Basic\Extraction and Process\SolutionRunDate.sql" />
+    <Build Include="Tables\Core\ChartOfAccount.sql" />
+    <Build Include="Tables\Core\Currency.sql" />
+    <Build Include="Tables\Core\CurrencyRate.sql" />
+    <Build Include="Tables\Core\RateType.sql" />
+    <Build Include="Tables\Basic\Finstat\IFRS_GL_Mapping.sql" />
+    <Build Include="Functions\Core\fn_getfirstday.sql" />
+    <Build Include="Tables\Basic\IFRS_Core\ifrs_caption_position.sql" />
+    <Build Include="Tables\Basic\IFRS_Core\ifrs_caption_mapping.sql" />
+    <Build Include="Tables\Basic\IFRS_Core\ifrs_derived_caption.sql" />
+    <Build Include="Tables\Basic\Finstat\ifrs_instrumentType.sql" />
+    <Build Include="Tables\Basic\Finstat\ifrs_gl_type.sql" />
+    <Build Include="Tables\Basic\Finstat\ifrs_instrumenttype_gl_map.sql" />
+    <Build Include="Tables\Basic\Finstat\ifrs_auto_posting_template.sql" />
+    <Build Include="Tables\Basic\Finstat\ifrs_trial_balance_gap.sql" />
+    <Build Include="Tables\Basic\Finstat\ifrs_trial_balance.sql" />
+    <Build Include="Tables\Basic\Finstat\ifrs_gladjustment.sql" />
+    <Build Include="Tables\Basic\Finstat\ifrs_posting_detail.sql" />
+    <Build Include="Tables\Basic\Finstat\ifrs_report.sql" />
+    <Build Include="Tables\Basic\Finstat\ifrs_transaction_detail.sql" />
+    <Build Include="Tables\Core\Branch.sql" />
+    <Build Include="Tables\Basic\MPR_Core\branchdefaultmis.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_managementtree.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_accountmis.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_misreplacement.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_team_definition.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_setup.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_team.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_team_classification_type.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_team_classification.sql" />
+    <Build Include="Tables\Basic\MPR_BS\mpr_bs_caption.sql" />
+    <Build Include="Tables\Basic\MPR_BS\mpr_product.sql" />
+    <Build Include="Tables\Basic\MPR_BS\mpr_non_product_map.sql" />
+    <Build Include="Tables\Basic\MPR_BS\mpr_non_product_rate.sql" />
+    <Build Include="Tables\Basic\MPR_BS\mpr_productmis.sql" />
+    <Build Include="Tables\Basic\MPR_BS\mpr_balancesheet_threshold.sql" />
+    <Build Include="Tables\Basic\Extraction and Process\ExtractionJob.sql" />
+    <Build Include="Tables\Basic\Extraction and Process\ProcessJob.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_accountofficer_detail.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_team_classification_map.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_transfer_price.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_account_transfer_price.sql" />
+    <Build Include="Tables\Core\Customer.sql" />
+    <Build Include="Tables\Core\CustAccount.sql" />
+    <Build Include="Tables\Basic\MPR_BS\mpr_balancesheet_adjustment.sql" />
+    <Build Include="Tables\Basic\MPR_BS\mpr_balancesheet.sql" />
+    <Build Include="Tables\Core\FinancialType.sql" />
+    <Build Include="Tables\Basic\IFRS_Core\ifrs_totalline.sql" />
+    <Build Include="Tables\Basic\IFRS_Core\ifrs_totalline_makeup.sql" />
+    <Build Include="Tables\Basic\MPR_PL\mpr_pl_caption.sql" />
+    <Build Include="Tables\Core\Enum\AccountType.sql" />
+    <Build Include="Tables\Core\Enum\auditaction.sql" />
+    <Build Include="Tables\Core\Enum\BalanceSheetCategory.sql" />
+    <Build Include="Tables\Core\Enum\BalanceSheetType.sql" />
+    <Build Include="Tables\Core\Enum\securitymode.sql" />
+    <Build Include="Tables\Basic\MPR_PL\mpr_gl_mapping.sql" />
+    <Build Include="Tables\Basic\MPR_PL\mpr_gl_reclassification.sql" />
+    <Build Include="Tables\Basic\MPR_PL\mpr_gl_exception.sql" />
+    <Build Include="Tables\Basic\MPR_PL\mpr_totalline.sql" />
+    <Build Include="Tables\Basic\MPR_PL\mpr_totalline_makeup.sql" />
+    <Build Include="Tables\Basic\MPR_PL\mpr_glmis.sql" />
+    <Build Include="Tables\Core\Enum\IFRSAdjustmentType.sql" />
+    <Build Include="Tables\Core\Enum\CurrencyType.sql" />
+    <Build Include="Tables\Core\Enum\IFRSInstrument.sql" />
+    <Build Include="Tables\Core\Enum\DRCRIndicator.sql" />
+    <Build Include="Tables\Core\Enum\PackageStatus.sql" />
+    <Build Include="Tables\Basic\Finstat\ifrs_registry.sql" />
+    <Build Include="Tables\Basic\Finstat\ifrs_mapping.sql" />
+    <Build Include="Tables\Basic\Extraction and Process\Upload.sql" />
+    <Build Include="Tables\Basic\Extraction and Process\UploadRole.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_costcentre_definition.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_costcentre.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_expense_basis.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_expense_product_mapping.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_expense_gl_mapping.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_expense_raw_basis.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_staffcost.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_opex_management_tree.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_activity_base.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_activity_base_ratio.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_opex_mis_replacement.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_opex_business_rule.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_opex_abc_exemption.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_opex_raw_expense.sql" />
+    <Build Include="Tables\Basic\MPR_PL\mpr_revenue.sql" />
+    <Build Include="Tables\Basic\Finstat\ifrs_budget.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_opex_incomeacctbasis.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_opex_basis_miscode.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_opex_depnxmpt.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_loan_setup.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_product.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_schedule_type.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_credit_risk_rating.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_collateral_category.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_watchlisted_loan.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_collateral_realization_period.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_collateral_information.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_collateral_type.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_impairment_override.sql" />
+    <Build Include="Tables\Basic\IFRS_FINANCIAL_INTRUMENTS\ifrs_fair_value_basis_map.sql" />
+    <Build Include="Tables\Basic\IFRS_FINANCIAL_INTRUMENTS\ifrs_fair_value_basis_exemption.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_general_transfer_price.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_mpr_account_mis_update.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_mpr_balancesheet_adjustment_push.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_mpr_balancesheet_applyMISNew.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_mpr_balancesheet_invalid_mis_fix.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_mpr_balancesheet_mgt_tree_apply.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_mpr_balancesheet_process_derivation.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_mpr_balancesheet_transferprice_process.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_mpr_team_breakdown.sql" />
+    <Build Include="SPP\MPR\MPR_PL\spp_mpr_revenue_accountfix_fromnarration.sql" />
+    <Build Include="SPP\MPR\MPR_PL\spp_mpr_revenue_applyMISNew.sql" />
+    <Build Include="SPP\MPR\MPR_PL\spp_mpr_revenue_invalid_mis_fix.sql" />
+    <Build Include="SPP\MPR\MPR_PL\spp_mpr_revenue_mgt_tree_apply.sql" />
+    <Build Include="SPP\MPR\MPR_PL\spp_mpr_revenue_mis_update.sql" />
+    <Build Include="SPP\MPR\MPR_PL\create_opex_process_tables.sql" />
+    <Build Include="Views\vw_Account_Management_Tree.sql" />
+    <Build Include="Views\vw_cor_solutionrundate.sql" />
+    <Build Include="Views\vw_mpr_opex_sbutype.sql" />
+    <Build Include="Views\VW_MPR_OPEX_STAFFCOST.sql" />
+    <Build Include="Views\vw_mpr_opex_staffgrosspay.sql" />
+    <Build Include="Views\vw_mpr_product.sql" />
+    <Build Include="Views\vw_mpr_productmis.sql" />
+    <Build Include="Views\vw_mpr_general_transfer_price.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_risk_rating_type.sql" />
+    <Build Include="SPP\Core\spp_cor_fiscalyear_autocreate.sql" />
+    <Build Include="SPP\Core\spp_cor_fiscalperiod_autocreate.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_mpr_team_autocreate.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_mpr_transfer_price_autocreate.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_mpr_non_product_rate_autocreate.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_mpr_close_period.sql" />
+    <Build Include="Tables\Core\ClosedPeriod.sql" />
+    <Build Include="Tables\Core\ClosePeriodTemplate.sql" />
+    <Build Include="Views\vw_mpr_revenue_caption.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_gl_mapping.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_account_transfer_price.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_transfer_price.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_balancesheet_threshold.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_pl_caption.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_glmis.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_productmis.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_bs_caption.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_misreplacement.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_accountmis.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_managementtree.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_team.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_branchdefaultmis.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_product.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_balancesheet.sql" />
+    <Build Include="Tables\Basic\MPR_BS\balancesheet_budget.sql" />
+    <Build Include="Tables\Basic\MPR_BS\balancesheet_budget_officer.sql" />
+    <Build Include="Tables\Basic\MPR_PL\revenue_budget.sql" />
+    <Build Include="Tables\Basic\MPR_PL\revenue_budget_officer.sql" />
+    <Build Include="Tables\Basic\MPR_PL\mpr_pl_income_report.sql" />
+    <Build Include="Tables\Basic\MPR_PL\mpr_pl_income_report_adjustment.sql" />
+    <Build Include="SPP\MPR\MPR_PL\spp_upload_mpr_pl_income_report.sql" />
+    <Build Include="SPP\MPR\MPR_PL\spp_mpr_pl_income_report_adjustment_push.sql" />
+    <Build Include="Tables\Basic\MPR_BS\mpr_bs_gl_mapping.sql" />
+    <Build Include="Views\vw_mpr_bs_gl.sql" />
+    <Build Include="Tables\Basic\MPR_BS\mpr_balancesheet_archive.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_mpr_close_balancesheet.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_bond_computation_result.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_usermis.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_bond_computation_result_zero.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_bond_periodic_schedule.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_equity_stock_computation_result.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_loan_periodic_schedule.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_loan_schedule.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_loans_impairment_result.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_tbills_computation_result.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_general_transfer_price.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_mpr_pl_consolidate.sql" />
+    <Build Include="Views\vw_mpr_bs_caption.sql" />
+    <Build Include="Views\vw_cor_cust_account.sql" />
+    <Build Include="Tables\Basic\CDQM\cdqm_address.sql" />
+    <Build Include="Tables\Basic\CDQM\cdqm_country.sql" />
+    <Build Include="Tables\Basic\CDQM\cdqm_gender_group.sql" />
+    <Build Include="Tables\Basic\CDQM\cdqm_title.sql" />
+    <Build Include="Tables\Basic\CDQM\cdqm_etl_configuration.sql" />
+    <Build Include="Tables\Basic\CDQM\cdqm_product.sql" />
+    <Build Include="Tables\Basic\CDQM\cdqm_customer_mis.sql" />
+    <Build Include="Tables\Basic\CDQM\cdqm_merchant.sql" />
+    <Build Include="Tables\Basic\CDQM\cdqm_cust_duplicates.sql" />
+    <Build Include="Tables\Basic\CDQM\cdqm_customer_persistent.sql" />
+    <Build Include="Tables\Core\GL_Definition.sql" />
+    <Build Include="Tables\Basic\MPR_PL\mpr_pl_derived_caption.sql" />
+    <Build Include="Tables\Scorecard\scd_team_map.sql" />
+    <Build Include="Tables\Scorecard\scd_category.sql" />
+    <Build Include="Tables\Scorecard\scd_kpi.sql" />
+    <Build Include="Tables\Scorecard\scd_classification.sql" />
+    <Build Include="Tables\Scorecard\scd_participant.sql" />
+    <Build Include="Tables\Scorecard\scd_threshold.sql" />
+    <Build Include="Tables\Core\Staff.sql" />
+    <Build Include="Tables\Scorecard\scd_entry.sql" />
+    <Build Include="Tables\Scorecard\scd_actual.sql" />
+    <Build Include="Tables\Scorecard\scd_target.sql" />
+    <Build Include="Tables\Scorecard\scd_actual_map.sql" />
+    <Build Include="Tables\Scorecard\scd_target_map.sql" />
+    <Build Include="Tables\Scorecard\scd_configuration.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_gl_revenue_share.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_bs_exemption.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_memo_account.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_memo_product.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_memo_glcode.sql" />
+    <Build Include="Tables\Scorecard\scd_team_classification.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_opex_gl_mapping.sql" />
+    <Build Include="SPP\MPR\MPR_PL\spp_mpr_revenue_unmapped_gl.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_mpr_bs_unmapped_product.sql" />
+    <Build Include="SPP\MPR\MPR_PL\spp_mpr_opex_getunmappedgl.sql" />
+    <Build Include="Tables\Basic\MPR_Core\mpr_memo_units.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_individual_schedule.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_individual_impairment.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_loan_primary_data.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_integral_fee.sql" />
+    <Build Include="Tables\Basic\IFRS_LOANS\ifrs_loan_irr_data.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_opex_report.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_balancesheet_budget_officer.sql" />
+    <Build Include="SPP\MPR\MPR_BS\spp_upload_mpr_balancesheet_budget.sql" />
+    <Build Include="SPP\MPR\MPR_PL\spp_upload_mpr_revenue_budget_officer.sql" />
+    <Build Include="SPP\MPR\MPR_PL\spp_upload_mpr_revenue_budget.sql" />
+    <Build Include="Functions\Core\xml_cor_audittrail.sql" />
+    <Build Include="SPP\Core\spp_cor_team_breakdown.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_expense_map.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_expense_raw_basis_temp.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_opex_adjustment.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\Mpr_Opex_Item_Dictionary.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_opex_staffcost_detail.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_opex_transaction_detail.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_Opex_value_map.sql" />
+    <Build Include="Functions\Core\fn_cor_Team_Breakdown.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_opex_basis_mapping.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_opex_gl_basis.sql" />
+    <Build Include="Tables\Basic\MPR_OPEX\mpr_opex_checklist.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Fintrak.Database.Main.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Fintrak.Database.Main.publish.xml" />
+    <None Include="Fintrak.Database.MainDesktop.publish.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Main.PostDeployment.sql" />
+  </ItemGroup>
+</Project>

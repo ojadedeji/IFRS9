@@ -1,0 +1,38 @@
+﻿CREATE TABLE [dbo].[mpr_revenue]
+(
+	[RevenueId] INT NOT NULL IDENTITY,
+	[TransId] varchar(100) NULL, 
+	[transdate] date NULL,
+	[Narrative] varchar(150) NULL,
+	[TeamCode] varchar(50) NULL,
+	[AccountOfficerCode] varchar(50) NULL,
+	[StaffID] VARCHAR(50)  NULL,
+	[BranchCode] varchar(50) NULL,
+	[Indicator] varchar(20) NULL,
+	[Currency] varchar(20) NULL,
+	[GLCode] varchar(20) NULL,
+	[GLAccount] varchar(50) NULL,
+	[GLDescription] varchar(100) NULL,
+	[Caption] Varchar(150) NULL,
+	[RelatedAccount] varchar(50) NULL,
+	[AccountTitle] varchar(100) NULL,
+	[CustCode] varchar(50) NULL,
+	[ProductCode] varchar(50) NULL,
+	[Amount_LCY] decimal(18,6) NULL,
+	[Period] int NULL,
+	[Year] Varchar(20) NULL,
+	[EntryStatus] Varchar(100) NULL,
+	[RunDate] date NULL,
+	[CompanyCode] Varchar(10) NULL,
+    [Active] BIT NULL, 
+    [Deleted] BIT NULL, 
+    [CreatedBy] VARCHAR(50) NULL, 
+    [CreatedOn] DATETIME NULL, 
+    [UpdatedBy] VARCHAR(50) NULL, 
+    [UpdatedOn] DATETIME NULL, 
+    [RowVersion] TIMESTAMP NOT NULL,   
+	CONSTRAINT [FK_mpr_revenue_company] FOREIGN KEY ([CompanyCode]) REFERENCES [cor_company]([Code]),
+    CONSTRAINT [PK_mpr_revenue] PRIMARY KEY ([RevenueId]) 
+)
+
+GO
